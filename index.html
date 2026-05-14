@@ -114,6 +114,36 @@
       font-size: 1.1rem;
       font-weight: 700;
     }
+    /* BOTÓN AYUDA */
+
+.ayuda-contenedor{
+  display:flex;
+  justify-content:center;
+  margin-top:40px;
+}
+
+.ayuda-btn{
+  background:#f2b300;
+  color:#111;
+  padding:18px 30px;
+  border-radius:16px;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:bold;
+  border:2px solid #f2b300;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.ayuda-btn:hover{
+  background:white;
+  color:#111;
+  transform:translateY(-3px);
+}
+
+.ayuda-btn i{
+  margin-right:10px;
+}
 
     /* Responsive: en pantallas pequeñas se ajusta */
     @media (max-width: 1100px) {
@@ -251,6 +281,20 @@
     </div>
     <h3>Procedimientos PON</h3>
   </a>
+</div>
+
+ <!-- BOTÓN AYUDA -->
+
+<div class="ayuda-contenedor">
+
+<a class="ayuda-btn" href="ayuda.html">
+
+<i class="fa-solid fa-circle-info"></i>
+
+Centro de ayuda y documentación
+
+</a>
+
 </div>
 
 </body>
