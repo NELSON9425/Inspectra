@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INSPECTRA | Gestión SST</title>
+
+  <!-- ICONOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      padding: 40px;
+    }
+
+    .titulo {
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .titulo h1 {
+      font-size: 60px;
+      color: #111;
+    }
+
+    .titulo span {
+      color: #f2b300;
+    }
+
+    .titulo p {
+      color: #555;
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    /* Grid: 5 columnas fijas para escritorio (5 arriba, 5 abajo) */
+    .contenedor {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+      margin-bottom: 25px;
+    }
+
+    /* Segunda fila: mismo estilo */
+    .contenedor-segundo {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 25px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+      border-bottom: 5px solid #f2b300;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .icono {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #111;
+      color: #f2b300;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      margin: 0 auto 20px auto;
+      border: 4px solid #f2b300;
+      transition: 0.2s;
+    }
+
+    .card:hover .icono {
+      transform: scale(1.02);
+      background: #1a1a1a;
+    }
+
+    .card h3 {
+      text-align: center;
+      margin-bottom: 0;
+      color: #222;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    /* Responsive: en pantallas pequeñas se ajusta */
+    @media (max-width: 1100px) {
+      body {
+        padding: 30px 20px;
+      }
+      .contenedor, .contenedor-segundo {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 18px;
+      }
+      .card {
+        padding: 18px 12px;
+      }
+      .icono {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+      }
+      .card h3 {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .contenedor, .contenedor-segundo {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .titulo h1 {
+        font-size: 42px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .contenedor, .contenedor-segundo {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="titulo">
+  <h1>INSPECTRA <span>1.0</span></h1>
+  <p>Plataforma integral de gestión SST</p>
+</div>
+
+<!-- PRIMERA FILA: 5 BOTONES -->
+<div class="contenedor">
+  <!-- 1. Informe de simulacro -->
+  <a class="card" href="https://drive.google.com/drive/folders/1_EJEMPLO_SIMULACRO?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div class="icono">
+      <i class="fa-solid fa-file-lines"></i>
+    </div>
+    <h3>Informe de simulacro</h3>
+  </a>
+
+  <!-- 2. Plan de emergencias -->
+  <a class="card" href="https://drive.google.com/drive/folders/2_EJEMPLO_EMERGENCIAS?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div class="icono">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+    </div>
+    <h3>Plan de emergencias</h3>
+  </a>
+
+  <!-- 3. Matriz de mejoras -->
+  <a class="card" href="https://drive.google.com/drive/folders/3_EJEMPLO_MEJORAS?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div class="icono">
+      <i class="fa-solid fa-chart-line"></i>
+    </div>
+    <h3>Matriz de mejoras</h3>
+  </a>
+
+  <!-- 4. Actas de asesoría -->
+  <a class="card" href="https://drive.google.com/drive/folders/4_EJEMPLO_ACTAS?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div class="icono">
+      <i class="fa-solid fa-file-signature"></i>
+    </div>
+    <h3>Actas de asesoría</h3>
+  </a>
+
+  <!-- 5. Accidentes de trabajo -->
+  <a class="card" href="https://drive.google.com/drive/folders/5_EJEMPLO_ACCIDENTES?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div class="icono">
+      <i class="fa-solid fa-briefcase-medical"></i>
+    </div>
+    <h3>Accidentes de trabajo</h3>
+  </a>
+</div>
+
+<!-- SEGUNDA FILA: 5 BOTONES (abajo) -->
+<div class="contenedor-segundo">
+  <!-- 6. Líneas basales -->
+  <a class="card" href="https://drive.google.com/drive/folders/6_EJEMPLO_LINEAS_BASALES?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div class="icono">
+      <i class="fa-solid fa-chart-gantt"></i>
+    </div>
+    <h3>Líneas basales</h3>
+  </a>
+
+  <!-- 7. Programas de gestión SST -->
+  <a class="card" href="https://drive.google.com/drive/folders/7_EJEMPLO_GESTION_SST?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div class="icono">
+      <i class="fa-solid fa-clipboard-list"></i>
+    </div>
+    <h3>Programas de gestión SST</h3>
+  </a>
+
+  <!-- 8. Procedimiento de trabajo -->
+  <a class="card" href="https://drive.google.com/drive/folders/8_EJEMPLO_PROC_TRABAJO?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div class="icono">
+      <i class="fa-solid fa-helmet-safety"></i>
+    </div>
+    <h3>Procedimiento de trabajo</h3>
+  </a>
+
+  <!-- 9. Fichas de seguridad -->
+  <a class="card" href="https://drive.google.com/drive/folders/9_EJEMPLO_FICHAS_SEG?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div class="icono">
+      <i class="fa-solid fa-flask"></i>
+    </div>
+    <h3>Fichas de seguridad</h3>
+  </a>
+
+  <!-- 10. Procedimientos operativos normalizados (PON) -->
+  <a class="card" href="https://drive.google.com/drive/folders/10_EJEMPLO_PON?usp=sharing" target="_blank" rel="noopener noreferrer">
+    <div class="icono">
+      <i class="fa-solid fa-cogs"></i>
+    </div>
+    <h3>Procedimientos PON</h3>
+  </a>
+</div>
+
+</body>
+</html>
