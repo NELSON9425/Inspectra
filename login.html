@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login | INSPECTRA</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f4f4;
+    font-family:Arial,sans-serif;
+}
+
+.login-box{
+    background:white;
+    width:360px;
+    padding:40px;
+    border-radius:22px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+    text-align:center;
+    border-bottom:6px solid #f2b300;
+}
+
+.logo{
+    width:120px;
+    border-radius:18px;
+    margin-bottom:15px;
+}
+
+h1{
+    margin:0;
+    font-size:34px;
+}
+
+span{
+    color:#f2b300;
+}
+
+p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    margin-bottom:18px;
+    border-radius:12px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#111;
+    color:#f2b300;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#222;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+<img src="Logo HSEQ.jpeg" class="logo">
+
+<h1>INSPECTRA <span>1.0</span></h1>
+
+<p>Acceso a plataforma SST</p>
+
+<input type="text" id="usuario" placeholder="Usuario">
+
+<input type="password" id="password" placeholder="Contraseña">
+
+<button onclick="login()">Ingresar</button>
+
+</div>
+
+<script>
+
+function login(){
+
+    const user = document.getElementById("usuario").value;
+    const pass = document.getElementById("password").value;
+
+    if(user === "admin" && pass === "1234"){
+
+        window.location.href = "dashboard.html";
+
+    }else{
+
+        alert("Usuario o contraseña incorrectos");
+
+    }
+}
+
+</script>
+
+</body>
+</html>
