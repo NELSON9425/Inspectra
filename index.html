@@ -104,9 +104,15 @@ function login(){
 
     if(user === "admin" && pass === "1234"){
 
-    localStorage.setItem("login","true");
+        localStorage.setItem("login","true");
 
-    window.location.href = "panel.html";
+        window.location.href = "panel.html";
+
+    }else{
+
+        alert("Usuario o contraseña incorrectos");
+
+    }
 
 }
 
