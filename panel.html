@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+<script>
+
+if(localStorage.getItem("login") !== "true"){
+    window.location.href = "index.html";
+}
+
+</script>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -145,6 +152,35 @@
   margin-right:10px;
 }
 
+.logout-btn{
+
+  position:fixed;
+  top:20px;
+  right:20px;
+
+  background:#111;
+  color:#f2b300;
+
+  border:none;
+  padding:12px 18px;
+
+  border-radius:12px;
+
+  font-weight:bold;
+  cursor:pointer;
+
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+  transition:0.3s;
+}
+
+.logout-btn:hover{
+
+  background:#222;
+  transform:translateY(-2px);
+
+}
+
     /* Responsive: en pantallas pequeñas se ajusta */
     @media (max-width: 1100px) {
       body {
@@ -184,7 +220,21 @@
     }
   </style>
 </head>
+<script>
+function logout(){
+
+    localStorage.removeItem("login");
+
+    window.location.href = "index.html";
+
+}
+</script>
+
 <body>
+
+<button onclick="logout()" class="logout-btn">
+Cerrar sesión
+</button>
 
 <div class="header">
 
